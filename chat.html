@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Chat - NEXUS VISA </title>
+    <link rel="stylesheet" href="global.css">
+    
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="nav container">
+           <div class="logo"> <img src="Gemini_Generated_Image_bkg5p3bkg5p3bkg5.png" alt="FLY HIGH VISA CONSULTANCY Logo"> </div>
+            <ul class="nav-links">
+                <li><a href="main page.html">Home</a></li>
+                <li><a href="university.html">Universities</a></li>
+                <li><a href="country.html">Countries</a></li>
+                <li><a href="chat.html">Live Chat</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" style="padding: 120px 20px 40px; max-width: 800px;">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <h1>💬 Live Chat with Consultant</h1>
+            <a href="main page.html" class="btn btn-secondary">← Back to Home</a>
+        </div>
+
+        <div class="chat-container">
+            <div id="chatMessages" class="chat-messages">
+                <div class="message bot">
+                    <strong>Visa Expert:</strong> Hello! I'm your visa consultant. How can I help you today? 
+                    What country or university are you interested in?
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="if(event.key==='Enter') sendMessage()">
+                <button class="btn btn-primary" onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i> Send
+                </button>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <button class="btn btn-primary" onclick="goToPage('booking')">
+                <i class="fas fa-calendar"></i> Book Consultation
+            </button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p> 2026 NEXUS VISA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

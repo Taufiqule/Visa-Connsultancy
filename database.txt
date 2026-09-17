@@ -1,0 +1,114 @@
+CREATE DATABASE nexusvisa_db; 
+USE nexusvisa_db;
+
+-- Universities Table
+CREATE TABLE universities (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    country VARCHAR(50) NOT NULL,
+    rating DECIMAL(2,1) NOT NULL,
+    fees INT NOT NULL,
+    scholarship VARCHAR(255),
+    intake VARCHAR(100),
+    course VARCHAR(100),
+    image VARCHAR(255),
+    details TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Insert Extended Data
+INSERT INTO universities (name, country, rating, fees, scholarship, intake, course, image, details) VALUES 
+
+-- USA Universities
+('Harvard University', 'USA', 4.9, 50000, 'Harvard Financial Aid Initiative', 'Fall & Spring', 'Computer Science', 'https://images.unsplash.com/photo-1562774053-701939374585', 'Ivy League, Top 1 global ranking.'),
+('Stanford University', 'USA', 4.8, 55000, 'Need-Blind Admission', 'Fall', 'Software Engineering', 'https://images.unsplash.com/photo-1564981797816-1043664bf78d', 'Silicon Valley connection.'),
+('MIT', 'USA', 4.9, 53000, 'MIT Scholarship Program', 'Fall', 'Artificial Intelligence', 'https://images.unsplash.com/photo-1559757175-5700dde675bc', 'World leader in technology.'),
+('Yale University', 'USA', 4.7, 45000, 'Yale Global Scholar', 'Fall & Spring', 'Law', 'https://images.unsplash.com/photo-1592334794792-a72e4d9ebd24', 'Prestigious Ivy League.'),
+('Princeton University', 'USA', 4.8, 48000, 'Princeton Aid', 'Fall', 'Physics', 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485', 'Top research facilities.'),
+('Columbia University', 'USA', 4.7, 52000, 'Merit Scholarships', 'Fall', 'Business Administration', 'https://images.unsplash.com/photo-1605750284743-3f79fb0866d0', 'Located in New York City.'),
+('University of Pennsylvania', 'USA', 4.7, 51000, 'Penn Grant', 'Fall', 'Economics', 'https://images.unsplash.com/photo-1569974507005-6dc61f97fb5c', 'Wharton School of Business.'),
+('California Institute of Technology', 'USA', 4.8, 56000, 'Caltech Research Grant', 'Fall', 'Aerospace Engineering', 'https://images.unsplash.com/photo-1523240795612-9a054b0db644', 'Science and Engineering focus.'),
+('University of Chicago', 'USA', 4.7, 54000, 'Uchicago Scholarship', 'Fall', 'Economics', 'https://images.unsplash.com/photo-1594315222309-ee1270c6d1d7', 'Leader in economics.'),
+('Johns Hopkins University', 'USA', 4.6, 52000, 'JHU Financial Aid', 'Fall', 'Medical Science', 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f', 'Top medical school.'),
+
+-- UK Universities
+('University of Oxford', 'UK', 4.8, 35000, 'Clarendon Scholarship', 'September', 'Engineering', 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1', 'Oldest university in English.'),
+('University of Cambridge', 'UK', 4.8, 33000, 'Cambridge International Trust', 'October', 'Mathematics', 'https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d', 'World-class research.'),
+('Imperial College London', 'UK', 4.7, 35000, 'President Scholarship', 'September', 'Biomedical Science', 'https://images.unsplash.com/photo-1633620327898-58e49880f78d', 'Science focus.'),
+('University College London', 'UK', 4.6, 32000, 'UCL Global Scholarship', 'September', 'Psychology', 'https://images.unsplash.com/photo-1629542383746-d79d5a970592', 'Located in central London.'),
+('King\'s College London', 'UK', 4.5, 30000, 'King\'s International', 'September', 'Medicine', 'https://images.unsplash.com/photo-1576085823488-c95f81101f1e', 'Prestigious medical school.'),
+('University of Edinburgh', 'UK', 4.6, 28000, 'Edinburgh Global Scholarship', 'September', 'AI & Data Science', 'https://images.unsplash.com/photo-1560243563-079238495088', 'Top UK university.'),
+('University of Manchester', 'UK', 4.5, 26000, 'Manchester Alumni', 'September', 'Chemistry', 'https://images.unsplash.com/photo-1599940824399-b87987ce0799', 'Strong research output.'),
+('University of Bristol', 'UK', 4.5, 27000, 'Bristol Scholarship', 'September', 'Law', 'https://images.unsplash.com/photo-1618517373049-8a57d6c1b94d', 'Redbrick university.'),
+('University of Glasgow', 'UK', 4.5, 25000, 'Glasgow International', 'September', 'Veterinary Medicine', 'https://images.unsplash.com/photo-1612969490660-d1ed6a8c3b56', 'Four ancient Scottish universities.'),
+('London School of Economics', 'UK', 4.6, 29000, 'LSE Graduate Route', 'September', 'Social Sciences', 'https://images.unsplash.com/photo-1612810905952-916b6e8882c7', 'Social sciences world leader.'),
+
+-- Canada Universities
+('University of Toronto', 'Canada', 4.7, 45000, ' Lester Pearson Scholarship', 'January & September', 'Business', 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f', 'Top 20 global ranking.'),
+('University of British Columbia', 'Canada', 4.6, 42000, 'UBC International Scholarship', 'September', 'Forest Sciences', 'https://images.unsplash.com/photo-1570018144715-431102400122', 'Beautiful campus.'),
+('McGill University', 'Canada', 4.6, 40000, 'McGill Entrance Aid', 'September', 'Medicine', 'https://images.unsplash.com/photo-1634658877064-3d5b3f65a5b1', 'Bilingual university.'),
+('University of Alberta', 'Canada', 4.5, 38000, 'Alberta Scholarship', 'September', 'Engineering', 'https://images.unsplash.com/photo-1598880940080-ff9a29891b85', 'Research intensive.'),
+('University of Waterloo', 'Canada', 4.5, 36000, 'Waterloo International', 'September', 'Computer Engineering', 'https://images.unsplash.com/photo-1581093450021-4a7360e9a6b9', 'Co-op education leader.'),
+('Western University', 'Canada', 4.5, 35000, 'Western Gold Award', 'September', 'Business Analysis', 'https://images.unsplash.com/photo-1615900119312-2acd5ec65a22', 'Ivy League of the North.'),
+
+-- Australia Universities
+('University of Melbourne', 'Australia', 4.6, 42000, 'Melbourne International Scholarship', 'February & July', 'Medical Science', 'https://images.unsplash.com/photo-1498243691581-b145c3f54a5a', 'Top Australian university.'),
+('Australian National University', 'Australia', 4.6, 40000, 'ANU College of Law', 'February', 'International Relations', 'https://images.unsplash.com/photo-1580736372344-9c9c8a7e6f8d', 'National university.'),
+('University of Sydney', 'Australia', 4.5, 41000, 'Sydney Achiever International', 'March', 'Architecture', 'https://images.unsplash.com/photo-1609766857041-ed61f8538d90', 'Historic campus.'),
+('University of Queensland', 'Australia', 4.5, 39000, 'UQ International', 'March', 'Marine Biology', 'https://images.unsplash.com/photo-1598496512317-2a89e282a6cf', 'Great science programs.'),
+('Monash University', 'Australia', 4.5, 38000, 'Monash International', 'March', 'Pharmacy', 'https://images.unsplash.com/photo-1598214886806-c871d0b4c608', 'Largest university in AU.'),
+
+-- Germany Universities
+('Technical University of Munich', 'Germany', 4.7, 3000, 'DAAD Scholarship', 'Winter Semester', 'Mechanical Engineering', 'https://images.unsplash.com/photo-1519452575417-564c1401ecc0', 'Top technical university.'),
+('Heidelberg University', 'Germany', 4.6, 1500, 'Heidelberg Scholarship', 'Winter', 'Medicine', 'https://images.unsplash.com/photo-1569144157591-c60f3f82d65e', 'Oldest university in Germany.'),
+('Karlsruhe Institute of Technology', 'Germany', 4.5, 2000, 'KIT Excellence', 'Winter', 'Physics', 'https://images.unsplash.com/photo-1586263718443-3d8f5f6d6104', 'Research focus.'),
+('Humboldt University of Berlin', 'Germany', 4.6, 2500, 'Humboldt Research', 'Winter', 'Philosophy', 'https://images.unsplash.com/photo-1529419412599-7bb551fa0559', 'Berlin university.'),
+('RWTH Aachen University', 'Germany', 4.5, 1800, 'RWTH International', 'Winter', 'Chemical Engineering', 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485', 'Technical giants.'),
+
+-- France Universities
+('Sorbonne University', 'France', 4.6, 2770, 'Eiffel Scholarship', 'September', 'Humanities', 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34', 'Historic Paris university.'),
+('École Polytechnique', 'France', 4.7, 4500, 'X Scholarship', 'September', 'Applied Mathematics', 'https://images.unsplash.com/photo-1593697821258-010d114c4e85', 'Top engineering school.'),
+('University of Paris', 'France', 4.4, 2500, 'French Government', 'September', 'Physics', 'https://images.unsplash.com/photo-1588516264174-02c09564337b', 'Largest university in France.'),
+('Sciences Po', 'France', 4.5, 3200, 'Sciences Po Grant', 'September', 'Political Science', 'https://images.unsplash.com/photo-1569517287806-ef3cc8a2d55b', 'Social sciences leader.'),
+
+-- Japan Universities
+('University of Tokyo', 'Japan', 4.7, 12000, 'MEXT Scholarship', 'April', 'Robotics', 'https://images.unsplash.com/photo-1528360983277-13d401cdc186', 'Japan Number 1.'),
+('Kyoto University', 'Japan', 4.6, 11000, 'Kyoto University Grant', 'April', 'Chemistry', 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e', 'Natural sciences focus.'),
+('Tokyo Institute of Technology', 'Japan', 4.5, 10000, 'Titech Scholarship', 'April', 'Civil Engineering', 'https://images.unsplash.com/photo-1576085823488-c95f81101f1e', 'Engineering powerhouse.'),
+('Osaka University', 'Japan', 4.5, 10500, 'JASSO Scholarship', 'April', 'Biomedical Engineering', 'https://images.unsplash.com/photo-1618453292480-1e2f53c9c0da', 'Big in research.'),
+
+-- Switzerland Universities
+('ETH Zurich', 'Switzerland', 4.9, 1500, 'Swiss Government Excellence', 'September', 'Artificial Intelligence', 'https://images.unsplash.com/photo-1519389950473-47ba0277781c', 'Tech leader.'),
+('EPFL', 'Switzerland', 4.9, 2000, 'EPFL Excellence', 'September', 'Computer Science', 'https://images.unsplash.com/photo-1599982204450-5d2573de567a', 'Tech in Lausanne.'),
+('University of Zurich', 'Switzerland', 4.5, 2500, 'UZH Scholarship', 'September', 'Biology', 'https://images.unsplash.com/photo-1618506469763-e0e4a4c8db5c', 'Largest university in ZH.'),
+
+-- Netherlands Universities
+('Delft University of Technology', 'Netherlands', 4.6, 12000, 'Justus & Louise', 'September', 'Architecture', 'https://images.unsplash.com/photo-1581093450021-4a7360e9a6b9', 'Technical leader.'),
+('University of Amsterdam', 'Netherlands', 4.6, 12000, 'Amsterdam Merit', 'September', 'Data Science', 'https://images.unsplash.com/photo-1512470876302-972faa2aa9a4', 'Liberal arts focus.'),
+('Leiden University', 'Netherlands', 4.5, 11000, 'Leiden Scholarship', 'September', 'Law', 'https://images.unsplash.com/photo-1598880940080-ff9a29891b85', 'Historic law school.'),
+
+-- Singapore Universities
+('National University of Singapore', 'Singapore', 4.8, 38000, 'ASEAN Scholarships', 'August', 'Cyber Security', 'https://images.unsplash.com/photo-1494526585095-c41746248156', 'Asia top.'),
+('Nanyang Technological University', 'Singapore', 4.7, 36000, 'NTU International', 'August', 'Engineering', 'https://images.unsplash.com/photo-1570018144715-431102400122', 'Tech powerhouse.'),
+('Singapore Management University', 'Singapore', 4.5, 34000, 'SMU Global', 'August', 'Finance', 'https://images.unsplash.com/photo-1593697821258-010d114c4e85', 'Business focus.'),
+
+-- China Universities
+('Tsinghua University', 'China', 4.8, 30000, 'Chinese Government Scholarship', 'September', 'Civil Engineering', 'https://images.unsplash.com/photo-1508804185872-d7badad00f7d', 'Top Asia.'),
+('Peking University', 'China', 4.8, 28000, 'Peking University Grant', 'September', 'Medicine', 'https://images.unsplash.com/photo-1592317291819-2e284c267557', 'Oldest in China.'),
+('Fudan University', 'China', 4.6, 25000, 'Fudan Scholarship', 'September', 'Management', 'https://images.unsplash.com/photo-1614444100964-250537950b6e', 'Business school.'),
+('Zhejiang University', 'China', 4.6, 22000, 'Zhejiang Scholarship', 'September', 'Agriculture', 'https://images.unsplash.com/photo-1598880940080-ff9a29891b85', 'Silicon Valley of China.'),
+
+-- South Korea Universities
+('Seoul National University', 'South Korea', 4.7, 6000, 'Global Korea Scholarship', 'Spring & Fall', 'Electronics Engineering', 'https://images.unsplash.com/photo-1538485399081-7191377e8241', 'SK Top.'),
+('KAIST', 'South Korea', 4.7, 7000, 'KAIST Scholarship', 'Spring', 'Robotics', 'https://images.unsplash.com/photo-1517976487492-5750f3195623', 'Tech giant.'),
+('Yonsei University', 'South Korea', 4.5, 6500, 'Yonsei Global', 'Spring', 'Medicine', 'https://images.unsplash.com/photo-1581093450021-4a7360e9a6b9', 'Historic university.'),
+
+-- New Zealand Universities
+('University of Auckland', 'New Zealand', 4.5, 32000, 'International Excellence', 'February', 'Architecture', 'https://images.unsplash.com/photo-1506744038136-46273834b3fb', 'Top NZ.'),
+('University of Otago', 'New Zealand', 4.5, 30000, 'Otago Scholarship', 'February', 'Dentistry', 'https://images.unsplash.com/photo-1588516264174-02c09564337b', 'Oldest NZ.'),
+
+-- Sweden Universities
+('Karolinska Institute', 'Sweden', 4.7, 15000, 'Swedish Institute', 'August', 'Medicine', 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f', 'Nobel Prize host.'),
+('KTH Royal Institute of Technology', 'Sweden', 4.5, 14000, 'KTH Grant', 'August', 'ICT', 'https://images.unsplash.com/photo-1598880940080-ff9a29891b85', 'Tech leader.'),
+
+-- Ireland Universities

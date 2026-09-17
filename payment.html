@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - NEXUS </title>
+    <link rel="stylesheet" href="global.css">
+    
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo"> <img src="Gemini_Generated_Image_bkg5p3bkg5p3bkg5.png" alt="FLY HIGH VISA CONSULTANCY Logo"> </div>
+            <ul class="nav-links">
+                <li><a href="main page.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="auth-container">
+        <div class="auth-form card" style="max-width: 500px;">
+            <h2><i class="fas fa-credit-card"></i> Secure Payment</h2>
+            <div style="text-align: center; margin-bottom: 2rem; background: #e8f5e8; padding: 1rem; border-radius: 10px;">
+                <h3>Consultation Fee: <strong>$49.99</strong></h3>
+                <p>One-time payment for expert consultation (1 hour)</p>
+            </div>
+            
+            <form id="paymentForm" onsubmit="event.preventDefault(); alert('Payment Successful! Check your email for confirmation.'); goToPage('index');">
+                <div class="form-group">
+                    <label>Card Number</label>
+                    <input type="text" placeholder="1234 5678 9012 3456" maxlength="19">
+                </div>
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label>Expiry Date</label>
+                        <input type="text" placeholder="MM/YY" maxlength="5">
+                    </div>
+                    <div class="form-group">
+                        <label>CVV</label>
+                        <input type="text" placeholder="123" maxlength="3">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Name on Card</label>
+                    <input type="text" placeholder="John Doe">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px;">
+                    <i class="fas fa-lock"></i> Pay $49.99 Securely
+                </button>
+                <p style="text-align: center; font-size: 0.9rem; color: #666; margin-top: 1rem;">
+                    🔒 100% Secure Payment | SSL Encrypted | No hidden charges
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - NEXUS </title>
+    <link rel="stylesheet" href="global.css">
+    
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="nav container">
+          <div class="logo"> <img src="NexusVisa Consultancy logo.png" alt="NexusVisa Consultancy Logo"> </div>
+            <ul class="nav-links">
+                <li><a href="main page.html">Home</a></li>
+                <li><a href="university.html">Universities</a></li>
+                <li><a href="country.html">Countries</a></li>
+                <li><a href="chat.html">Live Chat</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="auth-container">
+        <div class="card" style="max-width: 500px;">
+            <h2><i class="fas fa-calendar-check"></i> Book Consultation</h2>
+            <div id="consultationDetails" style="background: #e8f4f8; padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem; text-align: center;">
+                Select your consultation details
+            </div>
+            
+            <form id="bookingForm" onsubmit="event.preventDefault(); goToPage('payment');">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" required>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Date</label>
+                    <input type="date" required min="2024-01-15">
+                </div>
+                <div class="form-group">
+                    <label>Time Slot</label>
+                    <select required>
+                        <option value="">Select Time</option>
+                        <option>10:00 AM - 11:00 AM</option>
+                        <option>11:00 AM - 12:00 PM</option>
+                        <option>2:00 PM - 3:00 PM</option>
+                        <option>3:00 PM - 4:00 PM</option>
+                        <option>4:00 PM - 5:00 PM</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px;">
+                    <i class="fas fa-credit-card"></i> Proceed to Payment ($49.99)
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
